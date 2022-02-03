@@ -12,7 +12,7 @@ DB_NAME = "website"
 DATABASE_URI = "mysql+pymysql://{user}:{pw}@{host}/{db}".format(user=USER, pw=PSW, host=HOST, db=DB_NAME)
 
 def create_app():
-    app = Flask(__name__)
+    app = Flask(__name__, static_url_path='/static')
     app.config["SECRET_KEY"] = "qwerty123"
     app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False

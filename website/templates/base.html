@@ -7,11 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    
   <title>{% block title %}{% endblock %}</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Federico Rotatori</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -25,7 +26,7 @@
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="about_me" data-bs-toggle="dropdown" aria-expanded="false">Su di me</a>
-            <ul class="dropdown-menu" aria-labelledby="about_me" data-bs-popper="none">
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="about_me" data-bs-popper="none">
               <li><a class="dropdown-item" href="#">Chi sono</a></li>
               <li><a class="dropdown-item" href="#">Il "perchè" del sito</a></li>
               <li><a class="dropdown-item" href="#">Citazioni preferite</a></li>
