@@ -17,8 +17,9 @@ def about_me():
 
 @views.route("/su-di-me/perchè-questo-sito")
 def why_this_site():
-    return render_template("")
+    return render_template("su-di-me/why_this_site.html")
 
 @views.route("/su-di-me/citazioni-preferite")
-def favourite_quotes():
+def quotes():
     return render_template("")
+

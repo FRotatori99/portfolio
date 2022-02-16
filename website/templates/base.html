@@ -30,8 +30,8 @@
             <a class="nav-link dropdown-toggle" href="#" id="about_me" data-bs-toggle="dropdown" aria-expanded="false">Su di me</a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="about_me" data-bs-popper="none">
               <li><a class="dropdown-item" href="{{ url_for('views.about_me') }}">Chi sono</a></li>
-              <li><a class="dropdown-item" href="#">Il "perchè" del sito</a></li>
-              <li><a class="dropdown-item" href="#">Citazioni preferite</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('views.why_this_site') }}">Perchè questo sito?</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('views.quotes') }}">Citazioni preferite</a></li>
             </ul>
           </li>
           <li class="nav-item">
