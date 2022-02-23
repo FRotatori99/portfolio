@@ -42,7 +42,7 @@
                         <a class="nav-link" aria-current="page" href="#">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Contatti</a>
+                        <a class="nav-link" aria-current="page" href="{{ url_for('views.contacts') }}">Contatti</a>
                     </li>
                 </ul>
                 {% if current_user.is_authenticated %}
