@@ -43,3 +43,5 @@ def init_database(app):
         create_database(DATABASE_URI)
         db.create_all(app=app)
         print("Created Database")
+    else: # Create new tables
+        db.create_all(app=app)

@@ -1,35 +1,94 @@
 {% extends "base.html" %} {% block title %} Home {% endblock title %} {% block
 content %}
 <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-    <div class="col-md-5 p-lg-5 mx-auto my-5">
-        <img src="{{ url_for('static', filename='images/me/profile_picture_no_bg.png') }}" style="max-width: 75%; max-height: 75%; border-radius: 21px 21px 21px 21px;"/>
-        <h1 class="display-4 font-weight-normal">Federico Rotatori</h1>
-        <p class="lead font-weight-normal">Lorem ipsum.</p>
-    </div>
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+    <img src="{{ url_for('static', filename='images/me/profile_picture_no_bg.png') }}" style=" max-width: 75%; max-height: 75%; border-radius: 21px 21px 21px 21px;"/>
+    <h1 class="display-4 font-weight-normal">Federico Rotatori</h1>
+    <p class="lead font-weight-normal">
+      Ciao, mi chiamo Federico, ho {{ age }} anni e sono un software developer.
+    </p>
+  </div>
 </div>
 <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-    <form>
-        <div class="form-group">
-            <label for="first_name">Il tuo nome:</label>
-            <input type="text" class="form-control" id="first_name" placeholder="Inserisci il tuo nome">
-            <label for="email">La tua email:</label>
-            <input type="text" class="form-control" id="email" placeholder="Inserisci la tua email">
-            <label for="message">Testo:</label>
-            <textarea type="text" class="form-control" id="message" placeholder="Scrivimi" rows="5"></textarea>
-        </div>
-    </form>
-</div>
-<div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <div class="col-md-4 d-flex align-items-center">
-        <span class="text-muted">© 2022 wwww.federicorotatori.it</span>
-      </div>
-      
-      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3"><a class="text-muted" target="blank" href="https://www.linkedin.com/in/federico-rotatori-987a64179"><img src="{{ url_for('static', filename='icons/linkedin.svg') }}" alt="Linkedin" width="25" height="25"></a></li>
-        <li class="ms-3"><a class="text-muted" target="blank" href="https://www.instagram.com/federico_rotatori"><img src="{{ url_for('static', filename='icons/instagram.svg') }}" alt="Instagram" width="25" height="25"></a></li>
-        <li class="ms-3"><a class="text-muted" target="blank" href="https://www.facebook.com/rotatori.federico/"><img src="{{ url_for('static', filename='icons/facebook.svg') }}" alt="Facebook" width="25" height="25"></a></li>
-      </ul>
-    </footer>
+  <h3 class="mb-0">Skills</h3>
+  <div class="row align-items-center">
+    <div class="col-md-3">
+      <img src="{{ url_for('static', filename='images/tools/Omnis Studio Logo.png') }}" alt="Omnis Studio" width="150" height="auto"/>
+    </div>
+    <div class="col-md-3">
+      <img src="{{ url_for('static', filename='images/tools/Microsoft SQL Server Logo.png') }}" alt="Microsoft SQL Server" width="100" height="auto" />
+    </div>
+    <div class="col-md-3">
+      <img src="{{ url_for('static', filename='images/tools/Oracle SQL Developer Logo.png') }}" alt="Oracle SQL Developer" width="100" height="auto" />
+    </div>
+    <div class="col-md-3">
+      <img src="{{ url_for('static', filename='images/tools/MySql Logo.png') }}" alt="MySql Server" width="100" height="auto"/>
+    </div>
   </div>
+  <hr />
+  <div class="row align-items-center">
+    <div class="col-md-3">
+      <img src="{{ url_for('static', filename='images/tools/PHP Logo.png') }}" alt="PHP" width="100" height="auto" />
+    </div>
+    <div class="col-md-3">
+      <img src="{{ url_for('static', filename='images/tools/Python Logo.png') }}" alt="Python" width="150" height="auto" />
+    </div>
+    <div class="col-md-3">
+      <img src="{{ url_for('static', filename='images/tools/Flask Framework Logo.png') }}" alt="Flask Framework" width="100" height="auto" />
+    </div>
+    <div class="col-md-3">
+      <img src="{{ url_for('static', filename='images/tools/Docker Logo.png') }}" alt="Docker" width="100" height="auto" margin="auto" />
+    </div>
+  </div>
+</div>
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+  <div class="row">
+    <div class="col">
+      <div class="p-4">
+        <strong class="d-inline-block mb-2 text-primary">Blog</strong>
+        <h3 class="mb-0">Ultimi Post</h3>
+        <ol class="list-unstyled mb-0">
+          <li><a href="#">Post 1</a></li>
+          <li><a href="#">Post 2</a></li>
+          <li><a href="#">Post 3</a></li>
+          <li><a href="#">Post 4</a></li>
+          <li><a href="#">Post 5</a></li>
+          <li><a href="#">Post 6</a></li>
+          <li><a href="#">Post 7</a></li>
+          <li><a href="#">Altri post...</a></li>
+        </ol>
+      </div>
+    </div>
+    <div class="col">
+      <div class="col p-4 d-flex flex-column position-static">
+        <strong class="d-inline-block mb-2 text-primary">Blog</strong>
+        <h3 class="mb-0">Post 8</h3>
+        <div class="mb-1 text-muted">Ieri</div>
+        <p class="card-text mb-auto">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </p>
+        <a href="#">Continua a leggere...</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light"
+>
+  <form>
+    <div class="form-group">
+      <label for="first_name">Il tuo nome:</label>
+      <input type="text" class="form-control" id="first_name" placeholder="Inserisci il tuo nome"/>
+      <label for="email">La tua email:</label>
+      <input type="text" class="form-control" id="email" placeholder="Inserisci la tua email"/>
+      <label for="message">Testo:</label>
+      <textarea type="text" class="form-control" id="message" placeholder="Scrivimi" rows="5"></textarea>
+      <br>
+      <div class="col-md-12"> <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Scrivimi!"> </div>
+    </div>
+  </form>
+</div>
 {% endblock content %}
