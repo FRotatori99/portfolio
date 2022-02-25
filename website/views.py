@@ -26,12 +26,20 @@ def quotes():
 
 
 # Portfolio
-
+@views.route("/portfolio")
+def portfolio():
+    return render_template("portfolio/portfolio.html")
 # Referral
+@views.route("/referrals")
+def referrals():
+    return render_template("referrals/referrals.html")
 
 # Blog
+@views.route("/blog")
+def blog():
+    return render_template("blog/blog.html")
 
 # Contacts
-@views.route("/contacts")
+@views.route("/contatti")
 def contacts():
     return render_template("contacts.html")

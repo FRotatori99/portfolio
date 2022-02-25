@@ -32,13 +32,13 @@ class Quote(db.Model):
     id_author = db.Column(db.Integer)
     id_category = db.Column(db.Integer)
 
-class Languages(db.Model):
-    __tablename__ = 'Languages'
+class Language(db.Model):
+    __tablename__ = 'Language'
     id = db.Column(db.Integer, primary_key=True)
     code = db.Column(db.String(5)) # IT, EN
     description = db.Column(db.String(150)) # Italian, English
 
-class Settings(db.Model):
-    __tablename__ = 'Settings'
+class Setting(db.Model):
+    __tablename__ = 'Setting'
     id = db.Column(db.Integer, primary_key=True)
     id_default_language = db.Column(db.Integer)
