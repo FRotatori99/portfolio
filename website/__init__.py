@@ -4,7 +4,7 @@ from sqlalchemy_utils import database_exists, create_database, drop_database
 from os import path
 from flask_login import LoginManager
 from flask_mail import Mail
-import local_settings
+from . import local_settings
 
 db = SQLAlchemy()
 USER = "root"

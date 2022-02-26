@@ -1,5 +1,5 @@
 /venv
 website/__pycache__/
-website/local_settings.py
 __pycache__
 .vscode
+website/local_settings.py
