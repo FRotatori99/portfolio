@@ -203,4 +203,10 @@
     </div>
 </section>
 
-{% endblock content %}
+{% endblock content %} {% block endScript %}
+<script>
+    $('#nav').find('.active').removeClass("active");
+    $('#navWhyThisSite').addClass("active")
+    $('#about_me').addClass("active")
+</script>
+{% endblock endScript %}

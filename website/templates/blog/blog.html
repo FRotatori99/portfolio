@@ -7,4 +7,9 @@
         </p>
     </div>
 </div>
-{% endblock content %}
+{% endblock content %} {% block endScript %}
+<script>
+    $('#nav').find('.active').removeClass("active");
+    $('#navBlog').addClass("active")
+</script>
+{% endblock endScript %}

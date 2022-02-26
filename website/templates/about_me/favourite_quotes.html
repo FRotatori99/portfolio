@@ -14,4 +14,10 @@
     </div>
     <!-- endfor -->
 </div>
-{% endblock %}
+{% endblock %} {% block endScript %}
+<script>
+    $('#nav').find('.active').removeClass("active");
+    $('#navQuotes').addClass("active")
+    $('#about_me').addClass("active")
+</script>
+{% endblock endScript %}

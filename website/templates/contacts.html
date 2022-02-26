@@ -14,4 +14,9 @@
         </div>
     </form>
 </div>
-{% endblock %}
+{% endblock %} {% block endScript %}
+<script>
+    $('#nav').find('.active').removeClass("active");
+    $('#navContacts').addClass("active")
+</script>
+{% endblock endScript %}

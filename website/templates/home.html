@@ -87,9 +87,7 @@
 </div>
 {% endblock content %} {% block endScript %}
 <script>
-    $(".navbar .nav-link").on("click", function() {
-        $('#nav').find('.active').removeClass("active");
-        $(this).addClass("active");
-    });
+    $('#nav').find('.active').removeClass("active");
+    $('#navHome').addClass("active")
 </script>
 {% endblock endScript %}

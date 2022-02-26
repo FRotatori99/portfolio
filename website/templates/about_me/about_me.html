@@ -58,4 +58,10 @@
         </div>
     </div>
 </div>
-{% endblock content %}
+{% endblock content %} {% block endScript %}
+<script>
+    $('#nav').find('.active').removeClass("active");
+    $('#navAboutMe').addClass("active")
+    $('#about_me').addClass("active")
+</script>
+{% endblock endScript %}
