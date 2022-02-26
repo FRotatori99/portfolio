@@ -3,8 +3,10 @@ click==8.0.3
 cryptography==36.0.1
 dataclasses==0.8
 Flask==2.0.2
+flask-form==1.0.0
 Flask-Login==0.5.0
 Flask-SQLAlchemy==2.5.1
+Flask-WTF==1.0.0
 greenlet==1.1.2
 importlib-metadata==4.8.3
 itsdangerous==2.0.1
@@ -18,4 +20,5 @@ SQLAlchemy==1.4.31
 SQLAlchemy-Utils==0.38.2
 typing_extensions==4.0.1
 Werkzeug==2.0.2
+WTForms==3.0.0
 zipp==3.6.0

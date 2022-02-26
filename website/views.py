@@ -1,8 +1,10 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request
+from .forms import ContactForm
 from datetime import date
 
 views = Blueprint("views", __name__)
 
+# Home
 @views.route("/")
 @views.route("/home")
 def home():
@@ -24,7 +26,6 @@ def why_this_site():
 def quotes():
     return render_template("about_me/favourite_quotes.html")
 
-
 # Portfolio
 @views.route("/portfolio")
 def portfolio():
@@ -40,6 +41,15 @@ def blog():
     return render_template("blog/blog.html")
 
 # Contacts
-@views.route("/contatti")
+@views.route("/contatti", methods=['GET','POST'])
 def contacts():
-    return render_template("contacts.html")
+    form = ContactForm()
+    if request.method == 'POST':
+        name = request.form["name"]
+        email = request.form["email"]
+        subject = request.form["subject"]
+        message = request.form["message"]
+
+        return render_template("contacts.html", form=form)
+    else:
+        return render_template("contacts.html", form=form)

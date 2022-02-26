@@ -1,16 +1,15 @@
 {% extends "base.html" %} {% block title %} Contatti {% endblock title %} {% block content %}
 <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
     <h1 class="display-4 font-weight-normal">Contattami</h1>
-    <form>
+    <form action="{{ url_for('views.contacts') }}" method="POST">
         <div class="form-group">
-            <label for="first_name">Il tuo nome:</label>
-            <input type="text" class="form-control" id="first_name" placeholder="Inserisci il tuo nome" />
-            <label for="email">La tua email:</label>
-            <input type="text" class="form-control" id="email" placeholder="Inserisci la tua email" />
-            <label for="message">Testo:</label>
-            <textarea type="text" class="form-control" id="message" placeholder="Scrivimi" rows="5"></textarea>
-            <br>
-            <div class="col-md-12"> <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Scrivimi!"> </div>
+            <label for="first_name">{{ form.name.label }}</label>
+            <br>{{ form.name(class_="form-control", placeholder="Il tuo nome:") }}
+            <label for="email">{{ form.email.label }}</label>
+            <br> {{ form.email(class_="form-control", placeholder="La tua email:") }}
+            <label for="message">{{ form.message.label }}</label>
+            <br>{{ form.message(class_="form-control", placeholder="Il tuo messaggio:", rows="3") }}
+            <br> {{ form.submit(class_="btn btn-success btn-send pt-2 btn-block", value="Invia!") }}
         </div>
     </form>
 </div>
