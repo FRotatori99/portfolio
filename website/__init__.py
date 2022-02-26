@@ -3,7 +3,6 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy_utils import database_exists, create_database, drop_database
 from os import path
 from flask_login import LoginManager
-from flask_mail import Mail
 from . import local_settings
 
 db = SQLAlchemy()
@@ -18,17 +17,16 @@ def create_app():
     app.config["SECRET_KEY"] = "qwerty123"
     app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    db.init_app(app)
-    
+    db.init_app(app) 
+
     # Mail configuration
     app.config['MAIL_SERVER'] = 'smtp.gmail.com'
     app.config['MAIL_PORT'] = 465
     app.config['MAIL_USE_TLS'] = False
     app.config['MAIL_USE_SSL'] = True
+    # Usare variabili di ambiente per salvare email e password
     app.config['MAIL_USERNAME'] = local_settings.MAIL_USERNAME
     app.config['MAIL_PASSWORD'] = local_settings.MAIL_PASSWORD
-    mail = Mail(app)
-
 
     from .views import views
     from .auth import auth 

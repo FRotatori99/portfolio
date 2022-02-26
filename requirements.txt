@@ -1,3 +1,4 @@
+blinker==1.4
 cffi==1.15.0
 click==8.0.3
 cryptography==36.0.1
@@ -5,6 +6,7 @@ dataclasses==0.8
 Flask==2.0.2
 flask-form==1.0.0
 Flask-Login==0.5.0
+Flask-Mail==0.9.1
 Flask-SQLAlchemy==2.5.1
 Flask-WTF==1.0.0
 greenlet==1.1.2

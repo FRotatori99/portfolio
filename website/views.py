@@ -1,6 +1,8 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, flash, redirect, url_for
 from .forms import ContactForm
 from datetime import date
+from flask_mail import Mail, Message
+from flask import current_app as app
 
 views = Blueprint("views", __name__)
 
@@ -45,11 +47,14 @@ def blog():
 def contacts():
     form = ContactForm()
     if request.method == 'POST':
+        mail = Mail(app)
         name = request.form["name"]
         email = request.form["email"]
-        subject = request.form["subject"]
         message = request.form["message"]
-
-        return render_template("contacts.html", form=form)
+        msg = Message('Contact form from www.federicorotatori.it', sender='developer.fr99@gmail.com', recipients=['developer.fr99@gmail.com'])
+        msg.body = "Hai appena ricevuto una nuova contact form da www.federicorotatori.it\n\nName: {}\nEmail: {}\nMessage: {}\n\nSaluti,\nWebmaster".format(name, email, message)
+        mail.send(msg)
+        flash("Grazie del messaggio!", category="success")
+        return redirect(url_for('views.home'))
     else:
         return render_template("contacts.html", form=form)
